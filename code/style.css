@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #e0e0e0;
+    --bg-color: #fafafa;
     --text-color: #000000;
-    --primary-color: #eeeeee;
-    --secondary-color: #f3f3f3;
+    --primary-color: #f2f2f2;
+    --secondary-color: #e0e0e0;
 }
 
 .darkmode {
@@ -13,9 +13,69 @@
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     width: 100vw;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+}
+
+button {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Light/Dark Mode Button Styles */
+#light-dark-button {
+    background-color: #48494b;
+}
+
+.darkmode #light-dark-button {
+    background-color: #e3e3e3;
+}
+#light-dark-button svg{
+    width: 80px;
+    height: 80px;
+}
+
+#light-dark-button svg:first-child{
+    display:none;
+}
+
+.darkmode #light-dark-button svg:last-child{
+    display:none;
+}
+
+.darkmode #light-dark-button svg:first-child{
+    display:block;
+}
+
+#light-dark-button {
+    position: absolute;
+    top: 50px; 
+    right: 50px;
+}
+
+.score-container {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 200px;
 }
